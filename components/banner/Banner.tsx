@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 
 function Banner() {
     return (
@@ -37,8 +36,9 @@ function Banner() {
                 </div>
 
             </div>
+
             <div className='h-full justify-center  w-1/2 flex overflow-hidden rounded-3xl'>
-                    <div className='p-1'>
+                <div className='p-1'>
                         <Image
                             height={500}
                             width={250}
@@ -132,7 +132,7 @@ function Banner() {
                             src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1212&q=80" 
                         />
                     </div>
-                    
+
             </div>
         </div>
     )
