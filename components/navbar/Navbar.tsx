@@ -2,14 +2,15 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className='font-Nunito'>
-      <header aria-label="Site Header" className="shadow-sm h-20  overflow-hidden">
-        <div className="mx-auto max-w-screen-xl p-6 ">
-          <div className="flex items-center justify-between gap-4 lg:gap-10">
-            <div className="flex  lg:flex-1">
+    <div className='sticky bg-white z-40 top-0 font-Nunito'>
+      <header aria-label="Site Header" 
+      className="shadow-sm h-20">
+        <div className=" mx-auto max-w-screen-xl p-4 lg:p-6 ">
+          <div className="flex items-center justify-between gap-2 md:gap-4 lg:gap-10">
+            <div className="">
               <a href="#">
                 <span className="text-2xl font-extrabold">Readers Hub</span>
-                <span className="h-10 w-20 rounded-lg bg-gray-900"></span>
+                {/* <span className="h-10 w-20 rounded-lg bg-gray-900">fdfdfd</span> */}
               </a>
             </div>
 
@@ -23,10 +24,10 @@ function Navbar() {
               <a className="text-gray-700 text-base" href="">Contact</a>
             </nav>
 
-            <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
+            <div className="hidden items-center justify-end gap-4 md:flex">
               <a
                 // className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500"
-                className="bg-indigo-500 text-white rounded-full font-semibold px-8 py-3 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
+                className="bg-indigo-500 text-white rounded-full font-semibold px-4 md:px-8 py-2 md: hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
                 href=""
               >
                 Log in
@@ -34,14 +35,14 @@ function Navbar() {
 
               <a
                 // className="rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white"
-                className="bg-indigo-500 text-white rounded-full font-semibold px-8 py-3 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
+                className="bg-indigo-500 text-white rounded-full font-semibold px-4 md:px-8 py-2  hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
                 href=""
               >
                 Sign up
               </a>
             </div>
 
-            <div className="lg:hidden">
+            <div className="md:hidden">
               <button className="rounded-lg bg-gray-100 p-2 text-gray-600" type="button">
                 <span className="sr-only">Open menu</span>
                 <svg
