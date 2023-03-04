@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Banner from '../components/banner/Banner'
 import Navbar from '../components/navbar/Navbar'
 import Main from '../components/main'
-import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -16,10 +15,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navbar />
         <Banner />
         <Main />
-        <Footer />
       </main>
         
     </div>

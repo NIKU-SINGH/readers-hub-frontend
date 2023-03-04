@@ -1,15 +1,18 @@
+import Link from 'next/link'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 function Navbar() {
+  const router = useRouter();
   return (
     <div className='sticky bg-white z-40 top-0 font-Nunito'>
-      <header aria-label="Site Header" 
-      className="shadow-sm h-20">
+      <header aria-label="Site Header"
+        className="shadow-sm h-20">
         <div className=" mx-auto max-w-screen-xl p-4 lg:p-6 ">
           <div className="flex items-center justify-between gap-2 md:gap-4 lg:gap-10">
             <div className="">
               <a href="#">
-                <span className="text-2xl font-extrabold">Readers Hub</span>
+                <span className="text-2xl font-extrabold" onClick={() => router.push("/")}>Readers Hub</span>
                 {/* <span className="h-10 w-20 rounded-lg bg-gray-900">fdfdfd</span> */}
               </a>
             </div>
@@ -25,21 +28,20 @@ function Navbar() {
             </nav>
 
             <div className="hidden items-center justify-end gap-4 md:flex">
-              <a
-                // className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500"
-                className="bg-indigo-500 text-white rounded-full font-semibold px-4 md:px-8 py-2 md: hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
-                href=""
-              >
-                Log in
-              </a>
 
-              <a
-                // className="rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white"
+              <Link
+                className="bg-indigo-500 text-white rounded-full font-semibold px-4 md:px-8 py-2 md: hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
+                href="/auth/login">
+                Log in
+              </Link>
+
+              <Link
+                href="/auth/signup"
                 className="bg-indigo-500 text-white rounded-full font-semibold px-4 md:px-8 py-2  hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
-                href=""
+
               >
                 Sign up
-              </a>
+              </Link>
             </div>
 
             <div className="md:hidden">
@@ -62,6 +64,7 @@ function Navbar() {
                 </svg>
               </button>
             </div>
+
           </div>
         </div>
       </header>

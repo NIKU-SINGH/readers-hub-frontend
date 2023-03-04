@@ -10,5 +10,5 @@ module.exports = {
       'Nunito': ['Nunito'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')]
 }
